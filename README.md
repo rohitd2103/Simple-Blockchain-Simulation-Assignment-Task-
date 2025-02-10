@@ -27,7 +27,7 @@ Block Structure:
   3. Validates the blockchain by checking: Each block’s hash is correct, each block correctly references the hash of the previous block.
   4. Demonstrates tampering detection by modifying a block’s transactions and validating the chain’s integrity.
   5. Implements a basic proof-of-work mechanism to make block creation computationally intensive.
-  6.The mine_block method ensures the block’s hash meets a difficulty target (e.g., a certain number of leading zeros).
+  6. The mine_block method ensures the block’s hash meets a difficulty target (e.g., a certain number of leading zeros).
 
 ## Output 
 ![Output.png](Output.png)
