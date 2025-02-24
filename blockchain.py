@@ -88,22 +88,27 @@ class Blockchain:
 if __name__ == "__main__":
     my_blockchain = Blockchain()
 
-    print("Adding transactions and mining block 1...")
-    my_blockchain.add_transaction("Transaction 1")
-    my_blockchain.mine_pending_transactions()
+    # Get user input for the number of blocks to mine
+    num_blocks_to_mine = int(input("Enter the number of blocks to mine: "))
 
-    print("Adding transactions and mining block 2...")
-    my_blockchain.add_transaction("Transaction 2")
-    my_blockchain.add_transaction("Transaction 3")
-    my_blockchain.mine_pending_transactions()
+    for i in range(num_blocks_to_mine):
+        print(f"\nAdding transactions and mining block {i + 1}...")
+        my_blockchain.add_transaction(f"Transaction {i + 1}")
+        my_blockchain.mine_pending_transactions()
 
     print("\nBlockchain:")
     my_blockchain.print_chain()
 
     print("\nIs blockchain valid?", my_blockchain.is_chain_valid())
 
-    print("\nTampering with block 1...")
-    my_blockchain.chain[1].transactions = ["Tampered Transaction"]
+    # Get user input for the block to tamper with
+    block_to_tamper = int(input("\nEnter the block index to tamper with (1 to {}): ".format(num_blocks_to_mine)))
+
+    if 1 <= block_to_tamper <= num_blocks_to_mine:
+        print(f"\nTampering with block {block_to_tamper}...")
+        my_blockchain.chain[block_to_tamper].transactions = ["Tampered Transaction"]
+    else:
+        print("Invalid block index!")
 
     print("\nBlockchain after tampering:")
     my_blockchain.print_chain()
