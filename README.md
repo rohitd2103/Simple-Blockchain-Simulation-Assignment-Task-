@@ -1,15 +1,27 @@
 # Simple-Blockchain-Simulation-Assignment-Task-
 ## Installation 
-1. Clone the repository 
+#!/bin/bash
+
+# Clone the repository
 ```bash
 git clone https://github.com/rohitd2103/Simple-Blockchain-Simulation-Assignment-Task-
 cd Simple-Blockchain-Simulation-Assignment-Task-
 ```
 
-2. Run the Blockchain Script:
+# Install dependencies
+```bash
+pip install -r requirements.txt
+```
+# Run the Blockchain Script natively
 ```bash
 python blockchain.py
 ```
+# Build and run the Docker container
+```bash
+docker build -t blockchain-simulation .
+docker run -it --rm blockchain-simulation
+```
+
 
 ## Features and Functionality
 Block Structure:
