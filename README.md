@@ -30,5 +30,5 @@ Block Structure:
   6. The mine_block method ensures the block’s hash meets a difficulty target (e.g., a certain number of leading zeros).
 
 ## Output 
-![Output.png](Output.png)
+![Output.png](output.png)
 
