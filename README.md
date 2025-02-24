@@ -1,7 +1,5 @@
 # Simple-Blockchain-Simulation-Assignment-Task-
 ## Installation 
-#!/bin/bash
-
 # Clone the repository
 ```bash
 git clone https://github.com/rohitd2103/Simple-Blockchain-Simulation-Assignment-Task-
